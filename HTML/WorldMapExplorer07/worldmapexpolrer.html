@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Map Explorer</title>
+</head>
+<body>
+
+    <h1>World Map Explorer</h1>
+    <p>Click on a country to learn more about it.</p>
+
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Blue_Marble_2002.png/1920px-Blue_Marble_2002.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+         alt="World map for image map navigation"
+         width="1000" height="500"
+         usemap="#worldmap">
+
+    <map name="worldmap">
+
+        <area shape="circle"
+              coords="717,189,30"
+              href="https://en.wikipedia.org/wiki/India"
+              alt="India - clickable circular region"
+              target="_blank">
+
+        <area shape="rect"
+              coords="130,100,330,180"
+              href="https://en.wikipedia.org/wiki/United_States"
+              alt="United States - clickable rectangular region"
+              target="_blank">
+
+        <area shape="poly"
+              coords="320,250,370,240,400,270,380,320,350,340,320,310"
+              href="https://en.wikipedia.org/wiki/Brazil"
+              alt="Brazil - clickable polygon-shaped region"
+              target="_blank">
+
+        <area shape="rect"
+              coords="820,290,930,350"
+              href="https://en.wikipedia.org/wiki/Australia"
+              alt="Australia - clickable rectangular region"
+              target="_blank">
+
+    </map>
+
+</body>
+</html>
