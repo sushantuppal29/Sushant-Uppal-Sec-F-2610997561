@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readers' Haven - Book Registration & Order Form</title>
+</head>
+<body>
+
+    <h1>Readers' Haven - Book Registration & Order Form</h1>
+
+    <form action="/submit-order" method="post" target="_self" enctype="multipart/form-data">
+
+        <h2>Personal Information</h2>
+
+        <p>
+            <label for="customerName">Customer Name:</label><br>
+            <input type="text" id="customerName" name="customerName"
+                   placeholder="Enter your full name" required>
+        </p>
+
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="example@email.com" required>
+        </p>
+
+        <p>
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="tel" id="mobile" name="mobile"
+                   placeholder="Enter your 10-digit mobile number" required>
+        </p>
+
+        <p>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="1" max="120"
+                   placeholder="Enter your age">
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" required>
+        </p>
+
+        <h2>Delivery Information</h2>
+
+        <p>
+            <label for="deliveryAddress">Delivery Address:</label><br>
+            <textarea id="deliveryAddress" name="deliveryAddress" rows="4" cols="40"
+                      placeholder="Enter your full delivery address with city and postal code" required></textarea>
+        </p>
+
+        <p>
+            <label for="deliveryDate">Delivery Date:</label><br>
+            <input type="date" id="deliveryDate" name="deliveryDate">
+        </p>
+
+        <p>
+            <label for="deliveryTime">Preferred Delivery Time:</label><br>
+            <input type="time" id="deliveryTime" name="deliveryTime">
+        </p>
+
+        <h2>Book Preferences</h2>
+
+        <p>
+            <label for="category">Favorite Book Category:</label><br>
+            <select id="category" name="category" required>
+                <option value="">-- Select a category --</option>
+                <option value="fiction">Fiction</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="childrens">Children's Books</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="bookTitle">Book Title:</label><br>
+            <input type="text" id="bookTitle" name="bookTitle"
+                   placeholder="Enter the book title" required>
+        </p>
+
+        <p>
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </p>
+
+        <h2>Payment Details</h2>
+
+        <p>
+            <label>Preferred Payment Method:</label><br>
+            <input type="radio" id="cod" name="paymentMethod" value="Cash on Delivery" required>
+            <label for="cod">Cash on Delivery</label><br>
+            <input type="radio" id="online" name="paymentMethod" value="Online Payment">
+            <label for="online">Online Payment</label>
+        </p>
+
+        <h2>Additional Services</h2>
+
+        <p>
+            <label>Additional Services:</label><br>
+            <input type="checkbox" id="giftWrapping" name="services" value="Gift Wrapping">
+            <label for="giftWrapping">Gift Wrapping</label><br>
+            <input type="checkbox" id="bookmark" name="services" value="Bookmark">
+            <label for="bookmark">Bookmark</label><br>
+            <input type="checkbox" id="expressDelivery" name="services" value="Express Delivery">
+            <label for="expressDelivery">Express Delivery</label><br>
+            <input type="checkbox" id="greetingCard" name="services" value="Greeting Card">
+            <label for="greetingCard">Greeting Card</label>
+        </p>
+
+        <input type="hidden" name="formName" value="Readers Haven Book Order">
+
+        <p>
+            <label for="referenceFile">Upload Reference Image/Document (optional):</label><br>
+            <input type="file" id="referenceFile" name="referenceFile"
+                   accept="image/*,.pdf,.doc,.docx">
+        </p>
+
+        <p>
+            <label for="specialInstructions">Special Instructions:</label><br>
+            <textarea id="specialInstructions" name="specialInstructions" rows="4" cols="40"
+                      placeholder="Any special delivery or packaging instructions"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
