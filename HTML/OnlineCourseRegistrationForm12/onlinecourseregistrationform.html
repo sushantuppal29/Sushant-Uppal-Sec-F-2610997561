@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Registration</title>
+</head>
+<body>
+
+    <header>
+        <h1>Online Course Registration</h1>
+        <p>Fill in the form below to register for an online course.</p>
+    </header>
+
+    <main>
+        <form action="register.php" method="post" target="_self"
+              enctype="multipart/form-data" autocomplete="on">
+
+            <input type="hidden" name="formName" value="Online Course Registration">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="studentName">Student Name <span aria-hidden="true">*</span></label><br>
+                    <input type="text" id="studentName" name="studentName"
+                           placeholder="Enter your full name"
+                           maxlength="60" autocomplete="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label><br>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@mail.com"
+                           autocomplete="email" required>
+                </p>
+
+                <p>
+                    <label for="mobile">Mobile Number <span aria-hidden="true">*</span></label><br>
+                    <input type="tel" id="mobile" name="mobile"
+                           placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}"
+                           title="Enter exactly 10 digits"
+                           autocomplete="tel" required>
+                </p>
+
+                <p>
+                    <label for="age">Age <span aria-hidden="true">*</span></label><br>
+                    <input type="number" id="age" name="age"
+                           placeholder="Your age"
+                           min="10" max="100" required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" id="dob" name="dob">
+                </p>
+
+                <p>
+                    <label for="password">Password <span aria-hidden="true">*</span></label><br>
+                    <input type="password" id="password" name="password"
+                           placeholder="At least 8 characters"
+                           minlength="8" autocomplete="new-password" required>
+                </p>
+
+                <p>
+                    <label for="confirmPassword">Confirm Password <span aria-hidden="true">*</span></label><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                           placeholder="Re-enter your password"
+                           minlength="8" autocomplete="new-password" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Gender <span aria-hidden="true">*</span></legend>
+
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills (select all that apply)</legend>
+
+                <input type="checkbox" id="html" name="skills[]" value="HTML">
+                <label for="html">HTML</label><br>
+
+                <input type="checkbox" id="css" name="skills[]" value="CSS">
+                <label for="css">CSS</label><br>
+
+                <input type="checkbox" id="javascript" name="skills[]" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+
+                <input type="checkbox" id="python" name="skills[]" value="Python">
+                <label for="python">Python</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Preferences</legend>
+
+                <p>
+                    <label for="course">Select Course <span aria-hidden="true">*</span></label><br>
+                    <select id="course" name="course" required>
+                        <option value="" selected disabled>-- Choose a course --</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Python Programming">Python Programming</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="classTime">Preferred Class Time</label><br>
+                    <input type="time" id="classTime" name="classTime">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+
+                <p>
+                    <label for="address">Address / Additional Information</label><br>
+                    <textarea id="address" name="address" rows="5" cols="40"
+                              maxlength="500"
+                              placeholder="Enter your address or any other information"></textarea>
+                </p>
+
+                <p>
+                    <label for="document">Upload Document or Photograph</label><br>
+                    <input type="file" id="document" name="document"
+                           accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                           aria-describedby="fileHelp">
+                    <small id="fileHelp">Accepted formats: PDF, DOC, DOCX, JPG, PNG.</small>
+                </p>
+            </fieldset>
+
+            <p>* Required field</p>
+
+            <p>
+                <input type="submit" value="Submit Registration">
+                <input type="reset" value="Reset Form">
+            </p>
+
+        </form>
+    </main>
+
+</body>
+</html>
