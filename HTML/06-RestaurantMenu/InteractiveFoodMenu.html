@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Restaurant Menu</title>
+</head>
+<body style="background-color: #fdf6e3; text-align: center;">
+
+  <h1 style="color: #9b2226;">Interactive Restaurant Menu</h1>
+
+  <p style="font-size: 20px; color: #333;">
+    Click on any food item in the picture to see more information.
+  </p>
+
+  <img src="../../IMAGE/restaurantmenu06/45e76415-04e7-4e5f-93cb-c98d98b192f7.jpg"
+       alt="Restaurant table with pizza, burger, fries, sandwich and dessert"
+       width="800"
+       height="500"
+       usemap="#foodmap">
+
+  <map name="foodmap">
+
+    <!-- Circle 1: Pizza -->
+    <area shape="circle"
+          coords="392,369,135"
+          href="https://en.wikipedia.org/wiki/Pizza"
+          alt="Pizza - ingredients and history"
+          target="_blank">
+
+    <!-- Circle 2: Burger -->
+    <area shape="circle"
+          coords="651,95,78"
+          href="https://en.wikipedia.org/wiki/Hamburger"
+          alt="Burger - ingredients and history"
+          target="_blank">
+
+    <!-- Rectangle 1: French Fries -->
+    <area shape="rect"
+          coords="88,22,250,181"
+          href="https://en.wikipedia.org/wiki/French_fries"
+          alt="French Fries - crispy potato snack"
+          target="_blank">
+
+    <!-- Rectangle 2: Menu Card -->
+    <area shape="rect"
+          coords="273,25,425,230"
+          href="https://en.wikipedia.org/wiki/Menu"
+          alt="Menu Card - information about restaurant menus"
+          target="_blank">
+
+    <!-- Polygon 1: Sandwich -->
+    <area shape="poly"
+          coords="49,266,203,221,238,266,122,407,54,359"
+          href="https://en.wikipedia.org/wiki/Sandwich"
+          alt="Sandwich - bread and filling"
+          target="_blank">
+
+    <!-- Polygon 2: Cake Slice -->
+    <area shape="poly"
+          coords="456,171,503,128,554,151,555,210,496,223,457,200"
+          href="https://en.wikipedia.org/wiki/Cake"
+          alt="Cake Slice - dessert information"
+          target="_blank">
+
+    <!-- Default: all remaining area of the image -->
+    <area shape="default"
+          href="https://en.wikipedia.org/wiki/Restaurant"
+          alt="Other areas - restaurant information"
+          target="_blank">
+
+  </map>
+
+  <p style="color: #9b2226; font-size: 16px;">
+    Thank you for visiting our interactive food menu!
+  </p>
+
+</body>
+</html>
